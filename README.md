@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DevthomasOverflow NextJS 14 App
+
+Project built with NextJS 14, TypeScript, TailwindCSS, and more.
+
+[Mockup of DevthomasOverflow](https://www.figma.com/file/J5t3qWluzZnKZZabvJzTSy/DevthomasOverflow?type=design&node-id=1-49&mode=design&t=1sBjJkam5tYMkofV-0)
+
+
 
 ## Getting Started
 
