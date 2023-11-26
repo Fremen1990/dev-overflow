@@ -1,9 +1,12 @@
 {
-//  "$schema": "https://json.schemastore.org/eslintrc.json",
-//  "plugins": ["@typescript-eslint", "import"],
-//  "parserOptions": {
-//    "project": "./tsconfig.json"
-//  },
+  "$schema": "https://json.schemastore.org/eslintrc.json",
+  "plugins": [
+    "@typescript-eslint",
+    "import"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "extends": [
     "next/core-web-vitals",
     "standard",
@@ -19,11 +22,17 @@
     "import/order": [
       "error",
       {
-        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
         "newlines-between": "always"
       }
     ],
-
     // no let exports
     "import/no-mutable-exports": "error"
   }
