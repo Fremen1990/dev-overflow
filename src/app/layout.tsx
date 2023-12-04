@@ -2,7 +2,9 @@ import {ReactNode} from "react";
 import {ClerkProvider} from '@clerk/nextjs'
 import type {Metadata} from 'next'
 import {Inter, Space_Grotesk} from 'next/font/google'
+
 import './globals.css'
+import {ThemeProvider} from "@/src/context/ThemeProvider";
 
 const inter = Inter({
     subsets: ['latin'],
@@ -24,27 +26,28 @@ export const metadata: Metadata = {
     },
 }
 
+const clerkAppearance = {
+    elements: {
+        formButtonPrimary: 'primary-gradient',
+        footerActionLink: 'primary-text-gradient hoover:text-primary-500',
+    }
+}
 
 export default function RootLayout({children}: {
     children: ReactNode
 }) {
     return (
-        <ClerkProvider
-            appearance={{
-                elements: {
-                    formButtonPrimary: 'primary-gradient',
-                    footerActionLink: 'primary-text-gradient hoover:text-primary-500',
+        < html lang="en">
 
-                }
-            }}
-        >
-            < html lang="en">
-            <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
-            <h1 className="h1-bold">This is a piece of text</h1>
-            {children}
-            </body>
+        <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
 
-            </html>
+        <ClerkProvider appearance={clerkAppearance}>
+            <ThemeProvider>
+                {children}
+            </ThemeProvider>
         </ClerkProvider>
+
+        </body>
+        </html>
     )
 }
