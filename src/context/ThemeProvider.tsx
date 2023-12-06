@@ -1,6 +1,6 @@
 "use client"
 
-import {createContext, ReactNode, useContext, useEffect, useState} from "react";
+import {createContext, ReactNode, useContext, useState} from "react";
 
 enum Theme {
     LIGHT = "light",
@@ -26,9 +26,9 @@ export function ThemeProvider({children}: { children: ReactNode }) {
         document.documentElement.classList.add(newTheme);
     }
 
-    useEffect(() => {
-        handleToggleTheme()
-    }, [theme])
+    // useEffect(() => {
+    //     handleToggleTheme()
+    // }, [theme])
 
     return (
         <ThemeContext.Provider value={
