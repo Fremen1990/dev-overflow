@@ -9,8 +9,6 @@ export default authMiddleware({
     ],
 });
 
-// 04:00 Auth Middleware
-
 export const config = {
     matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
 };
